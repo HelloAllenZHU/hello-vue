@@ -1,5 +1,10 @@
+// 本文件为vue项目入口文件
+
 // 导入vue框架里面的createApp函数
 import { createApp } from 'vue'
+
+// 导入路由组建
+import Router from 'vue-router'
 
 // 导入本项目的App.vue组件
 import App from './App.vue'
@@ -25,6 +30,9 @@ app.use(ElementPlus, {
     size: 'small', 
     zIndex: 3000 
 })
+
+// 使用router组件
+//app.use(Router)
 
 // 将app实例挂在到index.html中的#app上
 app.mount('#app')
