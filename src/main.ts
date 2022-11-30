@@ -5,6 +5,12 @@
 // 导入vue框架里面的createApp函数
 import { createApp } from 'vue'
 
+// 导入本项目的App.vue组件
+import App from './App.vue'
+
+// 导入本项目的主css
+import './assets/main.css'
+
 // 导入路由组建(本行导入出错)
 //import Router from 'vue-router'
 
@@ -19,12 +25,6 @@ import ElementPlus from 'element-plus'
 
 // 导入element-plus框架的css
 import 'element-plus/dist/index.css'
-
-// 导入本项目的App.vue组件
-import App from './App.vue'
-
-// 导入本项目的主css
-import './assets/main.css'
 
 // 创建vue app
 const app = createApp(App)
