@@ -4,15 +4,22 @@ import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 
 const routes: Array<RouteRecordRaw> = [
-  // 首页（重定向，仅针对不带参数的路由）
+  // 首页
   {
     path: '/',
-    redirect: '/home',
+    name: 'home',
+    component: () => import('../views/home.vue')    // 路由的模板文件
+  },
+
+  // 首页（重定向，仅针对不带参数的路由）
+  {
+    path: '/index',
+    redirect: '/',
   },
 
   // 首页（重定向，可以带参数）
   {
-    path: '/',
+    path: '/home',
     redirect: {
       name: 'home',
       query: {
@@ -21,15 +28,8 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
 
-  // 首页
-  {
-    path: '/home',
-    name: 'home',
-    component: () => import('../views/home.vue')    // 路由的模板文件
-  },
-
   // 登录
-  {
+  /*{
     path: '/login',
     name: 'login',
     component: () => import('../views/login.vue'),
@@ -72,20 +72,19 @@ const routes: Array<RouteRecordRaw> = [
   },
 
   // 路由别名
-  /*
   {
     path: '/home',
     alias: '/index',
     name: 'home',
     component: () => import('../views/home.vue')
-  },*/
+  },
 
   // 404路由
   {
     path: '/:pathMatch(.*)*',
     name: '404',
     component: () => import('../views/404.vue')
-  },
+  },*/
 
     // 访问主域名时，根据用户的登录信息，重定向到不同的页面
     /*{
