@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/home.vue')    // 路由的模板文件(每个模板由n个组件构成)
+    component: () => import('@/views/home.vue')    // 路由的模板文件(每个模板由n个组件构成)
   },
 
   // 首页（重定向，不带参数）
