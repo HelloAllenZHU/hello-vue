@@ -18,3 +18,12 @@ export default defineComponent({
 <script lang="ts" setup name='app'>
 </script>
 -->
+
+<style>
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+</style>

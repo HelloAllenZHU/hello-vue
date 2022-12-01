@@ -1,5 +1,8 @@
 <template>
-    <router-link to="/home">首页</router-link>
+  <div class="not-found">
+    <img src="../assets/404.gif" alt="页面不存在" />
+    <router-link to="/home">回到首页</router-link>
+  </div>
 </template>
 
 <!--
