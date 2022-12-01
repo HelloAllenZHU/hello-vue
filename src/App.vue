@@ -15,10 +15,11 @@ export default defineComponent({
 </script>
 
 <!--这是组合式api，上面是选项式api
-<script lang="ts" setup name='app'>
+<script lang="ts" setup name='App'>
 </script>
 -->
 
+<!--
 <style>
 html,
 body,
@@ -27,3 +28,4 @@ body,
   height: 100%;
 }
 </style>
+-->
