@@ -32,7 +32,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/:pathMatch(.*)*',
     name: '404',
-    component: () => import('../views/404.vue')
+    component: () => import('@/views/404.vue')
   },
 
   // 登录页(带别名)
@@ -40,7 +40,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     alias: '/signin',
     name: 'login',
-    component: () => import('../views/login.vue')
+    component: () => import('@/views/login.vue')
   },
 
   // 注册页(带别名)
@@ -48,19 +48,19 @@ const routes: Array<RouteRecordRaw> = [
     path: '/register',
     alias: '/signup',
     name: 'register',
-    component: () => import('../views/register.vue')
+    component: () => import('@/views/register.vue')
   },
 
   // 二级路由
   {
     path: '/parent',
     name: 'parent',
-    component: () => import('../views/register.vue'),
+    component: () => import('@/views/register.vue'),
     children: [
         {
             path: 'child',
             name: 'child',
-            component: () => import('../views/register.vue')
+            component: () => import('@/views/register.vue')
         }
     ]
   },
