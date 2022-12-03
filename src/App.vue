@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="border:0px solid red;border-radius:10px">
     <router-view />
   </div>
 </template>
@@ -19,7 +19,6 @@ export default defineComponent({
 </script>
 -->
 
-<!--
 <style>
 html,
 body,
@@ -28,4 +27,3 @@ body,
   height: 100%;
 }
 </style>
--->

@@ -35,6 +35,13 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/404.vue')
   },
 
+  // test路由
+  {
+    path: '/test',
+    name: 'test',
+    component: () => import('@/views/test.vue')
+  },
+
   // 登录页(带别名)
   {
     path: '/login',
