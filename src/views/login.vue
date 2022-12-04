@@ -1,42 +1,45 @@
 <template>
     <div class="login-container">
       <el-form 
-        label-position="left" 
-        label-width="80px"
         :inline="false" 
         :model="formData" 
         size="large"
-        class="x"
       >
-        <div class="title-container">
-          <h3 class="title">
-            股票量化管理后台
-          </h3>
-          <lang-select class="set-language" />
+        <div>
+          <img src="image/logo.jpg" style="width:100%;height:100%"/>
         </div>
-        <el-form-item label="用户名">
+
+        <div class="title-container">
+          <h3 class="title">股票量化交易系统</h3>
+        </div>
+
+        <el-form-item>
             <el-input 
               v-model="formData.username" 
               placeholder="请输入用户名"
-              :prefix-icon="User"
+              prefix-icon="User"
               clearable
-              autocomplete="on"
+              autocomplete="off"
             />
         </el-form-item>
 
-        <el-form-item label="密码">
+        <el-form-item>
           <el-input 
             v-model="formData.password"
             placeholder="请输入用户密码" 
-            :prefix-icon="Lock"
-            show-password
+            prefix-icon="Lock"
             clearable
-            autocomplete="on"
+            show-password
+            autocomplete="off"
           />
         </el-form-item>
 
         <el-form-item>
-            <el-button type="primary" v-on:click="onSubmit" style="width:320px">登录</el-button>
+            <el-button type="primary" v-on:click="onLogin" style="width:100%">登录</el-button>
+        </el-form-item>
+
+        <el-form-item>
+            <el-button disabled type="default" v-on:click="onRegister" style="width:100%">注册</el-button>
         </el-form-item>
           
       </el-form>
@@ -55,8 +58,12 @@
         password: '',
       })
 
-      const onSubmit = () => {
-        console.log('submit!')
+      const onLogin = () => {
+        console.log('onLogin!')
+      }
+
+      const onRegister = () => {
+        console.log('onRegister!')
       }
 
       return {
@@ -64,7 +71,8 @@
         Lock,
         Calendar,
         formData,
-        onSubmit,
+        onLogin,
+        onRegister,
       }
     }
   })
@@ -73,30 +81,14 @@
 <style lang="scss" scoped>
 
 .login-container{
-  width:400px;
+  max-width: 400px;
+  width:auto;
   height:auto;
-  margin: auto auto;
-  padding: 3rem 3rem;
-  border:2px solid #33adff;
+  margin: 2rem auto;
+  padding: 3rem;
+  border:0px solid #33adff;
   border-radius: 10px;
   background-color: white;
-}
-
-.login-form {
-  position: relative;
-  width: 520px;
-  max-width: 100%;
-  padding: 160px 35px 0;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.svg-container {
-  /*padding: 6px 5px 6px 5px;
-  color: $dark_gray;*/
-  vertical-align: middle;
-  width: 30px;
-  display: inline-block;
 }
 
 .title-container {
@@ -104,8 +96,8 @@
 
   .title {
     font-size: 26px;
-    color: #666666;
-    margin: 0px auto 40px auto;
+    color: #222222;
+    margin: 0px auto 20px auto;
     text-align: center;
     font-weight: bold;
   }

@@ -1,6 +1,7 @@
 <template>
   <div class="not-found">
-    <img src="../assets/404.gif" alt="页面不存在" />
+    <img src="../assets/404.gif" alt="页面不存在" style="width:100%;height:100%;"/>
+    <br/>
     <router-link to="/home">回到首页</router-link>
   </div>
 </template>
